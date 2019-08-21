@@ -125,8 +125,7 @@ class UI {
   // edit expense
   editExpense(element) {
     let id = parseInt(element.dataset.id);
-    let parent = element.parentElement.parentElement.parentElement;
-    console.log(parent);
+    let parent = element.parentElement.parentElement;
     // remove from DOM
     this.expenseList.removeChild(parent);
     // show value
@@ -145,7 +144,7 @@ class UI {
   // delete expense
   deleteExpense(element) {
     let id = parseInt(element.dataset.id);
-    let parent = element.parentElement.parentElement.parentElement;
+    let parent = element.parentElement.parentElement;
     // remove from DOM
     this.expenseList.removeChild(parent);
     // remove from the list

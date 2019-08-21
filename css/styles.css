@@ -181,7 +181,7 @@ body {
 
 /* tabla */
 .table {
-  overflow-x: auto
+  overflow-x: auto;
 }
 .table-body td {
   text-align: center;
@@ -191,61 +191,10 @@ body {
   text-align: left;
 }
 .cell {
-  padding: 15px 0;
-  font-size: 14px;
+  padding: 19px 0;
+  font-size: 18px;
   line-height: 1.2;
-  font-weight: unset;
-} 
-/* .table {
-  display: flex;
-  flex-direction: column;
-  border-radius: 0.25rem;
-  overflow: hidden;
-  border: 1px solid #b3b3b3;
-  overflow-x: auto;
-  height: fit-content;
 }
-
-.table-header,
-.table-body .table-container {
-  display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
-}
-.table-body .cell {
-  color: var(--dark);
-}
-.cell {
-  padding: 15px 0;
-  font-size: 14px;
-  line-height: 1.2;
-  font-weight: unset;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: .5rem
-}
-.table-body .cell {
-  border-bottom: 1px solid #b3b3b3;
-}
-.cell:first-child {
-  justify-content: flex-start;
-  margin-left: .5rem;
-}
-.cell:last-child {
-  justify-content: space-evenly;
-  align-items: center;
-} */
-/* @media (min-width: 512px) {
-  .cell {
-    padding: 19px 0;
-    font-size: 18px;
-    line-height: 1.2;
-  }
-  .cell:first-child {
-    align-items: flex-end;
-    padding-left: 2rem;
-  }
-} */
 /* Case */
 .showCorrect {
   color: var(--green);
