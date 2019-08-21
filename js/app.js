@@ -75,19 +75,21 @@ class UI {
       <td class="cell" data-title="Balue">
         ${expense.amount}
       </td>
-      <td class="cell" data-title="Edit">
-        <a
-          href="#"
-          data-id="${expense.id}"
-          class="icon-edit">
-          <i>edit</i>
-        </a>
-        <a
-          href="#"
-          data-id="${expense.id}"
-          class="icon-delete">
-          <i>delete</i>
-        </a>
+      <td class="cell" data-title="Action">
+        <div class="icons-action">      
+          <a
+            href="#"
+            data-id="${expense.id}"
+            class="edit">
+            <i class="icon-edit"></i>
+          </a>
+          <a
+            href="#"
+            data-id="${expense.id}"
+            class="edit">
+            <i class="icon-delete"></i>
+          </a>
+        </div>
       </td>
     `;
     this.expenseList.appendChild(expenseContainer);
@@ -125,7 +127,7 @@ class UI {
   // edit expense
   editExpense(element) {
     let id = parseInt(element.dataset.id);
-    let parent = element.parentElement.parentElement;
+    let parent = element.parentElement.parentElement.parentElement;
     // remove from DOM
     this.expenseList.removeChild(parent);
     // show value
@@ -144,7 +146,7 @@ class UI {
   // delete expense
   deleteExpense(element) {
     let id = parseInt(element.dataset.id);
-    let parent = element.parentElement.parentElement;
+    let parent = element.parentElement.parentElement.parentElement;
     // remove from DOM
     this.expenseList.removeChild(parent);
     // remove from the list
@@ -176,9 +178,9 @@ function eventListeners() {
   // expense click
   expenseList.addEventListener("click", e => {
     e.preventDefault();
-    if (e.target.parentElement.classList.contains("icon-edit")) {
+    if (e.target.parentElement.classList.contains("edit")) {
       ui.editExpense(e.target.parentElement);
-    } else if (e.target.parentElement.classList.contains("icon-delete")) {
+    } else if (e.target.parentElement.classList.contains("delete")) {
       ui.deleteExpense(e.target.parentElement);
     }
   });

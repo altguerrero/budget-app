@@ -26,7 +26,7 @@ body {
   padding: 0 2rem;
 }
 .info,
-.table,
+.table-content,
 .budget-form-container,
 .expense-form-container {
   width: 100%;
@@ -44,7 +44,7 @@ body {
     margin-bottom: 0;
   }
   .info,
-  .table {
+  .table-content {
     width: 65%;
   }
   .budget-form-container,
@@ -53,7 +53,7 @@ body {
     margin-right: 2rem;
   }
   .expense-form-container,
-  .table {
+  .table-content {
     margin-top: 2rem;
   }
 }
@@ -94,6 +94,23 @@ body {
 .balance {
   color: var(--dark);
 }
+.budget-icon,
+.expense-icon,
+.balance-icon {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-position: center;
+}
+.budget-icon {
+  background-image: url(../img/paper-bill.png);
+}
+.expense-icon {
+  background-image: url(../img/credit-card.png);
+}
+.balance-icon {
+  background-image: url(../img/dollar-symbol.png);
+}
 @media (min-width: 512px) {
   .info {
     height: 159px;
@@ -106,16 +123,18 @@ body {
     font-size: 1.8rem;
     padding: 0;
   }
+  .budget-icon,
+  .expense-icon,
+  .balance-icon {
+    width: 50px;
+    height: 50px;
+  }
 }
 /* Forms */
 .budget-feedback,
 .expense-feedback {
   display: none;
 }
-/* .budget-form-container,
-.expense-form-container {
-  position: sticky;
-} */
 .budget-form,
 .expense-form {
   padding: 1rem;
@@ -180,20 +199,58 @@ body {
 }
 
 /* tabla */
-.table {
+.table-content {
+  border-collapse: collapse;
+  min-width: 400px;
   overflow-x: auto;
+  border-radius: 0.25rem 0.25rem 0 0;
+  overflow: hidden;
 }
-.table-body td {
-  text-align: center;
-}
-.table-header th:first-child,
-.table-body td:first-child {
-  text-align: left;
+.table-header .cell {
+  background-color: var(--blue);
+  color: #fff;
 }
 .cell {
-  padding: 19px 0;
-  font-size: 18px;
-  line-height: 1.2;
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 19px;
+}
+.table-body .cell {
+  border-bottom: 1px solid #dddddd;
+  color: var(--dark);
+}
+.table-body tr:nth-of-type(even) {
+  background-color: #dbdbdb;
+}
+.table-body tr:last-of-type {
+  border-bottom: 2px solid var(--blue);
+}
+.icons-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-delete,
+.icon-edit {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+  background-position: center;
+}
+.icon-delete {
+  background-image: url(../img/remove-symbol.png);
+}
+.icon-edit {
+  background-image: url(../img/edit-interface-sign.png);
+  margin-right: 1rem;
+}
+@media (min-width: 512px) {
+  .icon-delete,
+  .icon-edit {
+    width: 19px;
+    height: 19px;
+  }
 }
 /* Case */
 .showCorrect {
