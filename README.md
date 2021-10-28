@@ -1,1 +1,5 @@
-Esta aplicación te ayuda a sacar un presupuesto muy fácilmente. Aun que sus funcionalidades son muy básicas, en ocasiones te podría resultar de gran utilidad.
+# Budget app
+
+:eye: Preview: [https://altguerrero.github.io/budget-app/](https://altguerrero.github.io/budget-app/)
+
+![Budget](/img/preview.png)
